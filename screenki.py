@@ -10,7 +10,7 @@ st.write('')
 
 #input box
 int_put2 =  st.text_input('Sequence of protein:   e.g. MLLETQDALYVALELVIAALSVAGNVLVCAAVG...')
-@st.cache:
+@st.cache
 if int_put2:
  with st.spinner('Please wait...'):
   df1 = pd.read_csv('./data_ligand1.csv')
