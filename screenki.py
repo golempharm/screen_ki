@@ -51,9 +51,12 @@ if int_put2:
   df_bind4 = df_bind4.drop_duplicates(subset=['Ligand SMILES'])
   df_bind4 = df_bind4.reset_index(drop=True)
   df_bind4 = df_bind4.shift()[1:]
+  st.write('')
+  st.header ('Result:')
+  st.write('20 best matches molecules:')
   st.dataframe(df_bind4.style.format({'value (pKi)':'{:.2f}'}))
-  #df_bind4 = df_bind4.reset_index(inplace=True)
-  #df_bind4
+  st.write('')
+  st.write('Chemical formula of the best match molecule:')
 
   from rdkit import Chem
   from rdkit.Chem.rdDepictor import Compute2DCoords
